@@ -1,0 +1,72 @@
+[
+  {
+    "id": "02a521fd-f67c-432d-9d75-ad481a691bef",
+    "first_name": "Bates",
+    "last_name": "Marquez ",
+    "status": true,
+    "comments": 3,
+    "rate": 4,
+    "avatar": "http://placehold.it/32x32",
+    "speciality": [
+      "Хирург",
+      "Гастроэнтеролог",
+      "Терапевт"
+    ]
+  },
+  {
+    "id": "87f40694-87c6-4ce7-8b3c-abf777c858a3",
+    "first_name": "Logan",
+    "last_name": "Osborn ",
+    "status": true,
+    "comments": 5,
+    "rate": 3.5,
+    "avatar": "http://placehold.it/32x32",
+    "speciality": [
+      "Гастроэнтеролог",
+      "Терапевт"
+    ]
+  },
+  {
+    "id": "2dd2d55b-c6f5-4cb0-8dfc-e35339462945",
+    "first_name": "Lydia",
+    "last_name": "Pollard ",
+    "status": false,
+    "comments": 1,
+    "rate": 5,
+    "avatar": "http://placehold.it/32x32",
+    "speciality": []
+  },
+  {
+    "id": "a2e9b160-44ce-4bfa-b120-9b4d52a44071",
+    "first_name": "Rebekah",
+    "last_name": "Cote ",
+    "status": false,
+    "comments": 1,
+    "rate": 5,
+    "avatar": "http://placehold.it/32x32",
+    "speciality": [
+      "Терапевт"
+    ]
+  },
+  {
+    "id": "43596a12-7a60-4c5f-8d8b-ea581d0c5f29",
+    "first_name": "Mattie",
+    "last_name": "Malone ",
+    "status": true,
+    "comments": 7,
+    "rate": 5,
+    "avatar": "http://placehold.it/32x32",
+    "speciality": [
+      "Хирург"
+    ]
+  },
+  {
+    "id": "f14cecb8-cb93-487f-85d1-758301b7890c",
+    "first_name": "Kenya",
+    "last_name": "Mcdaniel ",
+    "status": true,
+    "comments": 4,
+    "rate": 5,
+    "avatar": "http://placehold.it/32x32"
+  }
+]

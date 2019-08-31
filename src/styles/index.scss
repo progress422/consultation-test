@@ -1,0 +1,199 @@
+$online-color: #27AE60;
+$offline-color: #828282;
+$hover-link-color: #1F8AFF;
+$bold-black-color: #333333;
+$text-color: #828282;
+$section-border-color: #E0E0E0;
+
+@import 'reset.css';
+@import 'fonts.css';
+
+body {
+  color: $text-color;
+  font-family: Roboto;
+  font-weight: 500;
+  margin: 0 auto;
+  max-width: 320px;
+  border: 1px solid #000;
+  h1{
+    color: $bold-black-color;
+  }
+}
+
+header{
+  section{
+    border-bottom: 1px solid $section-border-color;
+  }
+  .filter-reset{
+    margin: 15px 0 15px auto;
+    display: block;
+    color: $bold-black-color;
+    background: none;
+    border: none;
+    font-size: 12px;
+  }
+  .filter-search{
+    margin-bottom: 23px;
+  }
+  .filter-search__input{
+    background-color: rgba(142, 142, 147, 0.12);
+    border: none;
+    border-radius: 9px;
+    width: 100%;
+    line-height: 36px;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+
+.container{
+  padding: 0 15px;
+}
+
+button, a{
+  &:focus{
+    outline: none;
+  }
+}
+
+.input-container{
+  position: relative;
+  > input:focus + .input-placeholder{
+    opacity: 0;
+  }
+  .input-placeholder{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: opacity .3s linear;
+  }
+}
+
+.specialities-container{
+  padding: 15px 0;
+  h1{
+    font-size: 18px;
+    color: $bold-black-color;
+    margin-bottom: 15px;
+  }
+  .specialities-filter__container{
+    margin-bottom: 15px;
+    li{
+      display: inline-block;
+      border: 1px solid $section-border-color;
+      border-radius: 35px;
+      line-height: 30px;
+      padding: 0 15px;
+      margin-right: 10px;
+      span{
+        color: $bold-black-color;
+        font-size: 12px;
+      }
+    }
+    button{
+      background: none;
+      border: none;
+      color: #EB5757;
+      font-size: 10px;
+      display: inline-block;
+      margin-left: 5px;
+      padding: 0;
+    }
+  }
+  .specialities-filter-input{
+    width: 100%;
+    border: none;
+  }
+}
+
+.specialities-filter{
+
+}
+
+.doctor{
+  display: flex;
+  border-bottom: 1px solid $section-border-color;
+  padding: 15px 0 20px;
+  font-size: 12px;
+  line-height: 18px;
+  position: relative;
+  .doctor-profile-link{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    font-size: 18px;
+    color: $text-color;
+    &:hover{
+      color: $hover-link-color;
+    }
+    &.hidden{
+      display: none;
+    }
+  }
+  .doctor-info > div{
+    margin-top: 10px;
+  }
+  .doctor-photo{
+    margin-right: 15px;
+    img{
+      width: 40px;
+      border-radius: 50%;
+    }
+  }
+  .doctor__name{
+    font-size: 14px;
+    line-height: 21px;
+    color: $bold-black-color; 
+  }
+  .doctor__status{
+    &.online{
+      color: $online-color;
+    }
+  }
+  .doctor__rating{
+    .doctor__rating-stars{
+      i{
+        color: #FCD41D;
+      }
+    }
+    .doctor__rating-reviews{
+      margin-top: 10px;
+    }
+  }
+  .doctor__price{
+    color: $bold-black-color;
+    font-size: 18px;
+    line-height: auto;
+    span{
+      color: $text-color;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  .doctor__contacts{
+    display: flex;
+    a{
+      border: 1px solid #BDBDBD;
+      color: #BDBDBD;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      transition: .3s linear;
+      font-size: 17px;
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover{
+        color: #fff;
+        border-color: $hover-link-color;
+        background-color: $hover-link-color;
+      }
+    }
+  }
+}

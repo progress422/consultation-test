@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consultation</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+  <header>
+      <section>
+        <div class="container">
+            <button class="filter-reset" id="filterReset">Сбросить</button>
+            <div class="filter-search input-container">
+              <input type="text" name="search" id="userSearch" class="filter-search__input search-input-icon">
+              <span class="input-placeholder">
+                <i class="icon-search"></i>
+                Поиск
+              </span>
+            </div>
+        </div>
+      </section>
+      <section class="specialities-container">
+        <div class="container">
+          <h1>Специальности врачей</h1>
+          <div class="specialities-filter">
+            <div class="specialities-filter__container">
+              <ul>
+                <li>
+                  <span>Терапевт</span>
+                  <button class="remove-filter"><i class="icon-cross"></i></button>
+                </li>
+                <li>
+                  <span>Семейный врач</span>
+                  <button class="remove-filter"><i class="icon-cross"></i></button>
+                </li>
+              </ul>
+            </div>
+            <div class="specialities-filter__search input-container">
+              <input type="text" class="specialities-filter-input" id="specialityFilter">
+              <span class="input-placeholder">
+                <i class="icon-search"></i>
+                Введите специальность...
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+  </header>
+  <main>
+    <div class="container">
+      <div class="doctors-list" id="doctorsList">
+        <section class="doctor">
+          <div class="doctor-photo">
+
+          </div>
+          <div class="doctor-info">
+            <h2 class="doctor__name">Чумак Владимир Иванович</h2>
+            <span class="doctor__status">В сети</span>
+            <div class="doctor__rating">
+              <div class="doctor__rating-stars">
+                (4.5)
+              </div>
+              <div class="doctor__rating-reviews">
+                1 отзыв
+              </div>
+            </div>
+            <div class="doctor__speciality">
+              Гастроэнтеролог, Терапевт
+            </div>
+            <div class="doctor__price">
+              250 грн
+              <span>(10 минут)</span>
+            </div>
+            <div class="doctor__contacts">
+              <a href="#"><i class="icon-videocam"></i></a>
+              <a href="#"><i class="icon-phone"></i></a>
+              <a href="#"><i class="icon-conversation-speech-bubbles-"></i></a>
+            </div>
+          </div>
+        </section>
+      </div>
+   </div>
+  </main>
+</body>
+</html>
