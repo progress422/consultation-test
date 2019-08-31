@@ -1,3 +1,5 @@
+import { log } from "util";
+
 export function getAllSpecialities(usersData) {
     let allSpecialities = [];
     usersData.map(user => {
@@ -71,4 +73,33 @@ function getFiveStarsRating(starNumber, rating){
         starClass = 'star-empty';
     }
     return starClass;
+}
+
+export function logSearch(searchRequest) {
+    const date = new Date();
+    const day = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+    const time = `${date.getHours()}:${date.getMinutes()}`;
+    let storagedData;
+    if (localStorage.getItem('consultation-search-request') !== null){
+        storagedData = localStorage.getItem('consultation-search-request');
+        localStorage.removeItem('consultation-search-request');
+        localStorage.setItem('consultation-search-request', `${storagedData}, ${searchRequest} ${day} ${time}`);
+    } else {
+        localStorage.setItem('consultation-search-request', `${searchRequest} ${day} ${time}`);
+    }
+
+    //write to the document
+    let storagedDataArr = localStorage.getItem('consultation-search-request').split(',');
+    const searchList = document.getElementById('searchLog');
+    searchList.innerHTML = '';
+    storagedDataArr.map(searchRequest => {
+        searchList.insertAdjacentHTML('beforeend', `
+            <li>${searchRequest}</li>
+        `);
+    });
+
+    document.getElementById('clearLog').addEventListener('click', function() {
+        searchList.innerHTML = '';
+        localStorage.removeItem('consultation-search-request');
+    })
 }
