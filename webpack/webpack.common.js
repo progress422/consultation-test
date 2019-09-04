@@ -23,7 +23,12 @@ module.exports = {
       { from: Path.resolve(__dirname, '../public'), to: 'public' }
     ]),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, '../src/index.html')
+      filename: 'index.html',
+      template: Path.resolve(__dirname, '../src/index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'log.html',
+      template: Path.resolve(__dirname, '../src/log.html'),
     })
   ],
   resolve: {

@@ -100,6 +100,9 @@ button, a{
       display: inline-block;
       margin-left: 5px;
       padding: 0;
+      i{
+        pointer-events: none;
+      }
     }
   }
   .specialities-filter-input{
@@ -109,7 +112,34 @@ button, a{
 }
 
 .specialities-filter{
-
+  .specialities-filter__search{
+    position: relative;
+  }
+  .specialities-filter__search-result{
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    top: 100%;
+    margin-top: 10px;
+    z-index: 1;
+    li{
+      background-color: #fff;
+      border-bottom: 1px solid $section-border-color;
+      padding: 5px;
+      cursor: pointer;
+      transition: color .3s linear;
+      display: none;
+      &.show{
+        display: block;
+      }
+      &:first-child{
+        border-top: 1px solid $section-border-color;
+      }
+      &:hover{
+        color: $hover-link-color;
+      }
+    }
+  }
 }
 
 .doctor{

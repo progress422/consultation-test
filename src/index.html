@@ -8,6 +8,7 @@
 </head>
 <body>
   <header>
+    <a href="/log.html">LOG PAGE</a>
       <section>
         <div class="container">
             <button class="filter-reset" id="filterReset">Сбросить</button>
@@ -25,16 +26,7 @@
           <h1>Специальности врачей</h1>
           <div class="specialities-filter">
             <div class="specialities-filter__container">
-              <ul>
-                <li>
-                  <span>Терапевт</span>
-                  <button class="remove-filter"><i class="icon-cross"></i></button>
-                </li>
-                <li>
-                  <span>Семейный врач</span>
-                  <button class="remove-filter"><i class="icon-cross"></i></button>
-                </li>
-              </ul>
+              <ul id="activeFiltersList"></ul>
             </div>
             <div class="specialities-filter__search input-container">
               <input type="text" class="specialities-filter-input" id="specialityFilter">
@@ -42,6 +34,9 @@
                 <i class="icon-search"></i>
                 Введите специальность...
               </span>
+              <div class="specialities-filter__search-result">
+                <ul id="specialitiesFiltersList"></ul>
+              </div>
             </div>
           </div>
         </div>
@@ -82,15 +77,5 @@
       </div>
    </div>
   </main>
-  <footer style="margin: 50px 0;">
-    <div class="container">
-      <h2>Search log</h2>
-      <br>
-      <ul id="searchLog">
-
-      </ul>
-      <button id="clearLog">clear log</button>
-    </div>
-  </footer>
 </body>
 </html>
